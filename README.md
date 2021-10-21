@@ -11,16 +11,19 @@ Review module documentation! You are going to need to use these modules to compl
 
 [Python Image Library (PIL)](https://pillow.readthedocs.io/) - [Tutorial](https://pillow.readthedocs.io/en/stable/handbook/tutorial.html)
 
-Requests (HTTP client library) - Quickstart
+[Requests](https://requests.readthedocs.io/) (HTTP client library) - [Quickstart](https://requests.readthedocs.io/en/master/user/quickstart/)
 
-ReportLab (PDF creation library)
+[ReportLab](https://www.reportlab.com/docs/reportlab-userguide.pdf) (PDF creation library)
 
-email (constructing email)
+[email](https://docs.python.org/3/library/email.examples.html) (constructing email)
 
-psutil (processes and system utilization)
+[psutil](https://psutil.readthedocs.io/) (processes and system utilization)
 
-shutil (file operations)
+[shutil](https://docs.python.org/3/library/shutil.html) (file operations)
 
-smtplib (sending email)
+[smtplib](https://docs.python.org/3/library/smtplib.html) (sending email)
 
+
+-----------------------------
+-
 
