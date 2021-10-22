@@ -25,7 +25,6 @@ Review module documentation! You are going to need to use these modules to compl
 
 
 -----------------------------
--
 
 Introduction
 
@@ -36,12 +35,9 @@ You will create a Python script that will process the images and descriptions an
 Once the task is complete, the supplier should be notified with an email that indicates the total weight of fruit (in lbs) that were uploaded. The email should have a PDF attached with the name of the fruit and its total weight (in lbs). 
 
 Finally, in parallel to the automation running, we want to check the health of the system and send an email if something goes wrong. 
-What you’ll do
+What you’ll do:
 
-   Write a script that summarizes and processes sales data into different categories 
-
-   Generate a PDF using Python
-
-   Automatically send a PDF by email 
-
-   Write a script to check the health status of the system 
+*   Write a script that summarizes and processes sales data into different categories 
+*   Generate a PDF using Python
+*   Automatically send a PDF by email 
+*   Write a script to check the health status of the system 
