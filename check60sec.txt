@@ -1,0 +1,13 @@
+★  Answer from https://stackoverflow.com/questions/474528/what-is-the-best-way-to-repeatedly-execute-a-function-every-x-seconds ★
+If your program doesn't have a event loop already, use the [sched](http://docs.python.org/library/sched.html) module, which implements a general purpose event scheduler.
+import sched, time
+s = sched.scheduler(time.time, time.sleep)
+def do_something(sc): 
+    print("Doing stuff...")
+    # do your stuff
+    s.enter(60, 1, do_something, (sc,))
+
+s.enter(60, 1, do_something, (s,))
+s.run()
+
+If you're already using an event loop library like asyncio, trio, tkinter, PyQt5, gobject, kivy, and many others - just schedule the task using your existing event loop library's methods, instead.
