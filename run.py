@@ -6,7 +6,7 @@ import requests, json
 
 linexIP=sys.argv[1]
 
-url:"http://"+linexIP+"/fruits"
+url="http://"+linexIP+"/fruits/"
 source=os.environ["HOME"]+"/supplier-data/descriptions/*"
 
 #recorre directorio de las descripciones
@@ -29,8 +29,13 @@ for descriptions in glob.iglob(source):
     with open(descriptions) as file:
       messaggio=file.read()
       for counter,keys in enumerate(traceKeys):
-        dataPost[keys]=messaggio.split('/n')[counter]
+        dataPost[keys]=messaggio.split('\n')[counter]
       dataPost['weight']=int(dataPost['weight'].strip("lbs"))
       dataPost['image_name']=file.filename.strip('.txt')+".jpeg"
+      dataPost['image_name']=dataPost['image_name'].replace('descriptions','images')
+      print(dataPost)
       r=requests.post(url, json=dataPost)
       r.raise_for_status()
+      print(r.request.url)
+      print(r.status_code)
+
