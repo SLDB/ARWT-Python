@@ -31,7 +31,7 @@ def hostname_check():
 
 def email_warning(error):
   sender = "automation@example.com"
-  receiver = "{}@example.com".format(os.environ["USER"])
+  receiver = "{}@example.com".format(os.environ.get("USER"))
   subject = error
   body = "Please check your system and resolve the issue as soon as possible."
   message = emails.generate_email(sender, receiver, subject, body)
