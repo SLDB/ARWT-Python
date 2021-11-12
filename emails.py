@@ -29,7 +29,7 @@ def generate(sender, recipient, subject, body, attachment_path):
   return message
 
 
-def generate_email(sender, recipient, subject. body, attachment_path=None):
+def generate_email(sender, recipient, subject, body, attachment_path=None):
   """Creates an email without an attachment."""
   # Basic Email formatting
   message = email.message.EmailMessage()

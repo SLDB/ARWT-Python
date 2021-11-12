@@ -31,7 +31,7 @@ for descriptions in glob.iglob(source):
       for counter,keys in enumerate(traceKeys):
         dataPost[keys]=messaggio.split('\n')[counter]
       dataPost['weight']=int(dataPost['weight'].strip("lbs"))
-      dataPost['image_name']=file.filename.strip('.txt')+".jpeg"
+      dataPost['image_name']=file.name.strip('.txt')+".jpeg"
       dataPost['image_name']=dataPost['image_name'].replace('descriptions','images')
       print(dataPost)
       r=requests.post(url, json=dataPost)
